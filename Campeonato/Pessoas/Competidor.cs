@@ -4,19 +4,16 @@ using System.Text;
 
 namespace Campeonato.Pessoas
 {
-    public class Torcedor : Pessoa
+    public class Competidor : Pessoa
     {
-        //Atributos
-        public string Tipo = "torcedor";
+        public string Tipo = "competidor";
 
-        //Construtor
-        public Torcedor(string nome, string cpf, string email) 
+        public Competidor(string nome, string cpf, string email) 
             : base(nome, cpf, email)
         {
 
         }
 
-        //Métodos
         public override void ExibeInfo()
         {
             Console.WriteLine("Nome do " + Tipo + ": " + Nome);
