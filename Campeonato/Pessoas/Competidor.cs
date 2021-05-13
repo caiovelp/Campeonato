@@ -10,8 +10,8 @@ namespace Campeonato.Pessoas
         public string Tipo = "competidor";
 
         //Construtor
-        public Competidor(string nome, string cpf, string email) 
-            : base(nome, cpf, email)
+        public Competidor(string nome, string cpf, string celular) 
+            : base(nome, cpf, celular)
         {
 
         }
@@ -21,7 +21,7 @@ namespace Campeonato.Pessoas
         {
             Console.WriteLine("Nome do " + Tipo + ": " + Nome);
             Console.WriteLine("CPF do " + Tipo + ": " + CPF);
-            Console.WriteLine("E-mail do " + Tipo + ": " + Email);
+            Console.WriteLine("E-mail do " + Tipo + ": " + Celular);
         }
     }
 }

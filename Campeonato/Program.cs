@@ -16,8 +16,8 @@ namespace Campeonato
         static void Main(string[] args)
         {
             //Pessoas
-            Pessoa Caio = new Torcedor("Caio Paranhos", "159.572.797-30", "caio.hvparanhos@gmail.com");
-            Pessoa Mylena = new Competidor("Mylena Leite", "154.520.307-51", "mylena-leite@hotmail.com");
+            Pessoa Caio = new Torcedor("Caio Paranhos", "15957279730", "21995636965");
+            Pessoa Mylena = new Competidor("Mylena Leite", "15452030751", "21976948862");
 
 
             Pessoa.ExibeTotalPessoas();
