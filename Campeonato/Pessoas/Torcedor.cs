@@ -7,7 +7,7 @@ namespace Campeonato.Pessoas
     public class Torcedor : Pessoa
     {
         //Atributos
-        public string Tipo = "torcedor";
+        protected string Tipo = "torcedor";
 
         //Construtor
         public Torcedor(string nome, string cpf, string celular) 

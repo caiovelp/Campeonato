@@ -16,8 +16,8 @@ namespace Campeonato
         static void Main(string[] args)
         {
             //Pessoas
-            Pessoa Caio = new Torcedor("Caio Paranhos", "15957279730", "21995636965");
-            Pessoa Mylena = new Competidor("Mylena Leite", "15452030751", "21976948862");
+            Torcedor Caio = new Torcedor("Caio Paranhos", "15957279730", "21995636965");
+            Competidor Mylena = new Competidor("Mylena Leite", "15452030751", "21976948862");
 
 
             Pessoa.ExibeTotalPessoas();
@@ -30,12 +30,14 @@ namespace Campeonato
             PulaLinha();
 
             //Competições
-            Competicao Futebol = new Futebol(8, 1000.00);
+            Competicao competicao1 = new Fifa(1000.00);
+
+            competicao1.Registrar(Mylena);
 
             Competicao.ExibeTotalCompeticoes();
             PulaLinha();
 
-            Futebol.ExibeInfo();
+            competicao1.ExibeInfo();
 
 
 

@@ -7,7 +7,7 @@ namespace Campeonato.Pessoas
     public class Competidor : Pessoa
     {
         //Atributos
-        public string Tipo = "competidor";
+        protected string Tipo = "competidor";
 
         //Construtor
         public Competidor(string nome, string cpf, string celular) 

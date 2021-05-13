@@ -4,13 +4,14 @@ using System.Text;
 
 namespace Campeonato.Competições
 {
-    public class Futebol : Competicao
+    public class Fifa : Competicao
     {
         //Atributos
-        public string Tipo = "Em equipe";
+        protected string Tipo = "Individual";
+        protected string Modalidade = "Fifa";
 
         //Construtor
-        public Futebol(int numero, double premio) : base(numero, premio)
+        public Fifa(double premio) : base(premio)
         {
 
         }
@@ -18,9 +19,9 @@ namespace Campeonato.Competições
         //Métodos
         public override void ExibeInfo()
         {
-            Console.WriteLine("FUTEBOL");
+            Console.WriteLine(Modalidade);
             Console.WriteLine("Tipo de competição: " + Tipo);
-            Console.WriteLine("Número de equipes: " + Numero);
+            Console.WriteLine("Número de participantes: " + TotalCompetidores);
             Console.WriteLine("Premio da competição: R$" + Premio.ToString("N2"));
         }
     }

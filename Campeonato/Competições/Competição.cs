@@ -1,21 +1,21 @@
-﻿using System;
+﻿using Campeonato.Pessoas;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Campeonato.Competições
 {
-    public abstract class Competicao
+    public abstract class Competicao : IGerenciadorCompeticao
     {
         //Atributos
-        public int Numero { get; private set; } //Numero de Equipes ou de Participantes
         public double Premio { get; private set; }
+        public int TotalCompetidores { get; private set; }
 
         protected static int TotalCompeticoes { get; set; }
 
         //Construtor
-        public Competicao(int numero, double premio)
+        public Competicao(double premio)
         {
-            Numero = numero;
             Premio = premio;
 
             TotalCompeticoes++;
@@ -28,5 +28,9 @@ namespace Campeonato.Competições
         }
 
         public abstract void ExibeInfo();
+        public void Registrar(Competidor competidor)
+        {
+            TotalCompetidores++;
+        }
     }
 }
