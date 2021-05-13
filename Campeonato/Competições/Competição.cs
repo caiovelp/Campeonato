@@ -28,7 +28,7 @@ namespace Campeonato.Competições
         }
 
         public abstract void ExibeInfo();
-        public void Registrar(Competidor competidor)
+        public void RegistrarIndividuo(Competidor competidor)
         {
             TotalCompetidores++;
         }

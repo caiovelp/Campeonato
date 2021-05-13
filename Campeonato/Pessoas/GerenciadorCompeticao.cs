@@ -6,6 +6,6 @@ namespace Campeonato.Pessoas
 {
     interface IGerenciadorCompeticao
     {
-        void Registrar(Competidor competidor);
+        void RegistrarIndividuo(Competidor competidor);
     }
 }
