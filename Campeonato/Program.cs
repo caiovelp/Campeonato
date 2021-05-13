@@ -1,4 +1,5 @@
 ﻿using Campeonato.Competições;
+using Campeonato.Equipes;
 using Campeonato.Pessoas;
 using System;
 
@@ -29,10 +30,17 @@ namespace Campeonato
 
             PulaLinha();
 
+            //Equipes
+            Time Azul = new Time("Azul");
+
+            Azul.RegistrarIndividuo(Mylena);
+            Azul.ExibeInfo();
+            
+
+            PulaLinha();
+
             //Competições
             Competicao competicao1 = new Fifa(1000.00);
-
-            competicao1.Registrar(Mylena);
 
             Competicao.ExibeTotalCompeticoes();
             PulaLinha();

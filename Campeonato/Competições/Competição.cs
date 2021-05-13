@@ -5,11 +5,10 @@ using System.Text;
 
 namespace Campeonato.Competições
 {
-    public abstract class Competicao : IGerenciadorCompeticao
+    public abstract class Competicao
     {
         //Atributos
         public double Premio { get; private set; }
-        public int TotalCompetidores { get; private set; }
 
         protected static int TotalCompeticoes { get; set; }
 
@@ -28,9 +27,5 @@ namespace Campeonato.Competições
         }
 
         public abstract void ExibeInfo();
-        public void RegistrarIndividuo(Competidor competidor)
-        {
-            TotalCompetidores++;
-        }
     }
 }

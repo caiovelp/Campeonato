@@ -21,7 +21,6 @@ namespace Campeonato.Competições
         {
             Console.WriteLine(Modalidade);
             Console.WriteLine("Tipo de competição: " + Tipo);
-            Console.WriteLine("Número de participantes: " + TotalCompetidores);
             Console.WriteLine("Premio da competição: R$" + Premio.ToString("N2"));
         }
     }
