@@ -11,7 +11,7 @@ namespace Campeonato.Pessoas
         public string CPF { get; private set; }
         public string Email { get; private set; }
 
-        public static int TotalDePessoas { get; set; }
+        protected static int TotalDePessoas { get; set; }
 
         //Construtor
         public Pessoa(string nome, string cpf, string email)
