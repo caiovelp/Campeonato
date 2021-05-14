@@ -40,12 +40,12 @@ namespace Campeonato
             PulaLinha();
 
             //Competições
-            Competicao competicao1 = new Fifa(1000.00);
+            Competicao fifa = new Individual("Fifa");
 
             Competicao.ExibeTotalCompeticoes();
             PulaLinha();
 
-            competicao1.ExibeInfo();
+            fifa.ExibeInfo();
 
 
 

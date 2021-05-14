@@ -4,14 +4,13 @@ using System.Text;
 
 namespace Campeonato.Competições
 {
-    public class Fifa : Competicao
+    public class Coletiva : Competicao
     {
-        //Atributos
-        protected string Tipo = "Individual";
-        protected string Modalidade = "Fifa";
+        //Parâmetros
+        public string Tipo = "Coletiva";
 
         //Construtor
-        public Fifa(double premio) : base(premio)
+        public Coletiva(string modalidade) : base(modalidade)
         {
 
         }
@@ -21,7 +20,6 @@ namespace Campeonato.Competições
         {
             Console.WriteLine(Modalidade);
             Console.WriteLine("Tipo de competição: " + Tipo);
-            Console.WriteLine("Premio da competição: R$" + Premio.ToString("N2"));
         }
     }
 }

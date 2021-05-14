@@ -8,14 +8,14 @@ namespace Campeonato.Competições
     public abstract class Competicao
     {
         //Atributos
-        public double Premio { get; private set; }
+        public string Modalidade { get; private set; }
 
         protected static int TotalCompeticoes { get; set; }
 
         //Construtor
-        public Competicao(double premio)
+        public Competicao(string modalidade)
         {
-            Premio = premio;
+            Modalidade = modalidade;
 
             TotalCompeticoes++;
         }
