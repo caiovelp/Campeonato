@@ -9,11 +9,12 @@ namespace Campeonato.Equipes
     {
         //Atributos
         public string Nome { get; private set; }
-        public int ParticipantesTime { get; private set; }
+        public int TotalParticipantesTime { get; private set; }
+
+        public List<string> participantes = new List<string>();
 
 
-        //Próximo passo: (MODELO GINCANA IFRJ)  Como o modelo é uma gincana, todas as equpes já estão participando
-        //do campeonato de forma implícita. Então quando eu chamar a informação de participantes de uma competição,
+        //Próximo passo: (MODELO GINCANA IFRJ Então quando eu chamar a informação de participantes de uma competição,
         //quero que mostre a equipe da qual ele faz parte.
 
         //Construtor
@@ -21,15 +22,34 @@ namespace Campeonato.Equipes
         {
             Nome = nome;
         }
+
+        //Métodos
         public void RegistrarIndividuo(Competidor competidor)
         {
-            ParticipantesTime++;
+            if(participantes.Contains(competidor.Nome)) {
+
+                Console.WriteLine(competidor.Nome + " Já foi adicionado. " +
+                    "Não é permitido registrar o mesmo partipante 2 vezes");
+            }
+            else
+            {
+                participantes.Add(competidor.Nome);
+                TotalParticipantesTime++;
+            }
+
         }
 
         public void ExibeInfo()
         {
             Console.WriteLine("Nome do time: " + Nome);
-            Console.WriteLine("Pessoas no time: " + ParticipantesTime);
+            Console.WriteLine("Pessoas no time: " + TotalParticipantesTime);
+        }
+
+        public void ExibeListaTime()
+        {
+            Console.WriteLine("Participantes do time ordenados por nome");
+            participantes.Sort();
+            participantes.ForEach(i => Console.WriteLine(i));
         }
     }
 }

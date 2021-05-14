@@ -18,7 +18,11 @@ namespace Campeonato
         {
             //Pessoas
             Torcedor Caio = new Torcedor("Caio Paranhos", "15957279730", "21995636965");
+
             Competidor Mylena = new Competidor("Mylena Leite", "15452030751", "21976948862");
+            Competidor Elias = new Competidor("Elias Silva", "94811974336", "64999018878");
+            Competidor Nina = new Competidor("Nina Almeida", "29899579793", "21985038933");
+            Competidor Elza = new Competidor("Elza Barros", "68349901780", "21997588342");
 
 
             Pessoa.ExibeTotalPessoas();
@@ -34,7 +38,13 @@ namespace Campeonato
             Time Azul = new Time("Azul");
 
             Azul.RegistrarIndividuo(Mylena);
+            Azul.RegistrarIndividuo(Elza);
+            Azul.RegistrarIndividuo(Nina);
+            Azul.RegistrarIndividuo(Elias);
+
             Azul.ExibeInfo();
+            PulaLinha();
+            Azul.ExibeListaTime();
             
 
             PulaLinha();
