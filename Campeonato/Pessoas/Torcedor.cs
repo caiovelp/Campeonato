@@ -19,9 +19,8 @@ namespace Campeonato.Pessoas
         //Métodos
         public override void ExibeInfo()
         {
-            Console.WriteLine("Nome do " + Tipo + ": " + Nome);
-            Console.WriteLine("CPF do " + Tipo + ": " + CPF);
-            Console.WriteLine("E-mail do " + Tipo + ": " + Celular);
+            Console.WriteLine(Tipo.ToUpper());
+            Console.WriteLine("Nome: " + Nome + ", CPF: " + CPF + ", Celular: " + Celular);
         }
     }
 }
