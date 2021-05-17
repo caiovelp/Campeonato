@@ -33,7 +33,7 @@ namespace Campeonato.Equipes
             }
             else
             {
-                participantes.Add(competidor.Nome);
+                participantes.Add(competidor.ToString());
                 TotalParticipantesTime++;
             }
 
@@ -47,7 +47,7 @@ namespace Campeonato.Equipes
 
         public void ExibeListaTime()
         {
-            Console.WriteLine("Participantes do time ordenados por nome");
+            Console.WriteLine("Participantes do time ordenados por nome:");
             participantes.Sort();
             participantes.ForEach(i => Console.WriteLine(i));
         }

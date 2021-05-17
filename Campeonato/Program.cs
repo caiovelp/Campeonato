@@ -24,14 +24,6 @@ namespace Campeonato
             Competidor Nina = new Competidor("Nina Almeida", "29899579793", "21985038933");
             Competidor Elza = new Competidor("Elza Barros", "68349901780", "21997588342");
 
-
-            Pessoa.ExibeTotalPessoas();
-            PulaLinha();
-
-            Caio.ExibeInfo();
-            PulaLinha();
-            Mylena.ExibeInfo();
-
             PulaLinha();
 
             //Equipes
@@ -51,11 +43,6 @@ namespace Campeonato
 
             //Competições
             Competicao fifa = new Individual("Fifa");
-
-            Competicao.ExibeTotalCompeticoes();
-            PulaLinha();
-
-            fifa.ExibeInfo();
 
 
 
