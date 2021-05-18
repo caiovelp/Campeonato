@@ -39,6 +39,19 @@ namespace Campeonato.Equipes
 
         }
 
+        public void RemoverIndividuo(Competidor competidor)
+        {
+            if (participantes.Contains(competidor))
+            {
+                participantes.Remove(competidor);
+                TotalParticipantesTime--; 
+            }
+            else
+            {
+                Console.WriteLine($"Não há ninguém chamado {competidor.Nome} na lista.");
+            }
+        }
+
         public void ExibeInfo()
         {
             Console.WriteLine("Nome do time: " + Nome);

@@ -33,10 +33,8 @@ namespace Campeonato
 
             Azul.RegistrarIndividuo(Mylena);
             Azul.RegistrarIndividuo(Elza);
-            Azul.RegistrarIndividuo(Elza2);
             Azul.RegistrarIndividuo(Nina);
             Azul.RegistrarIndividuo(Elias);
-            Azul.RegistrarIndividuo(Elias2);
 
 
 
