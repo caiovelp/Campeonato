@@ -5,17 +5,12 @@ using System.Text;
 
 namespace Campeonato.Equipes
 {
-    public class Time
+    public class Time : ListaCampeonato
     {
         //Atributos
         public string Nome { get; private set; }
-        public int TotalParticipantesTime { get; private set; }
-
-        public List<Competidor> participantes = new List<Competidor>();
-
-
-        //Próximo passo: (MODELO GINCANA IFRJ Então quando eu chamar a informação de participantes de uma competição,
-        //quero que mostre a equipe da qual ele faz parte.
+        public int TotalMembrosTime { get; private set; }
+        private List<Competidor> _membrosTime = new List<Competidor>();
 
         //Construtor
         public Time(string nome)
@@ -24,17 +19,22 @@ namespace Campeonato.Equipes
         }
 
         //Métodos
+        public bool VerificaParticipante(Competidor competidor)
+        {
+            return _participantes.Contains(competidor);
+        }
         public void RegistrarCompetidor(Competidor competidor)
         {
-            if(participantes.Contains(competidor)) {
+            if(_participantes.Contains(competidor)) {
 
-                Console.WriteLine($"{competidor.Nome} já foi adicionado. " +
+                Console.WriteLine($"{competidor.Nome} já foi adicionado no campeonato. " +
                     $"Não é permitido registrar o mesmo partipante 2 vezes");
             }
             else
             {
-                participantes.Add(competidor);
-                TotalParticipantesTime++;
+                _membrosTime.Add(competidor);
+                ListaCampeonato.AdicionarParticipante(competidor);
+                TotalMembrosTime++;
             }
 
         }
@@ -49,14 +49,15 @@ namespace Campeonato.Equipes
 
         public void RemoverCompetidor(Competidor competidor)
         {
-            if (participantes.Contains(competidor))
+            if (_participantes.Contains(competidor))
             {
-                participantes.Remove(competidor);
-                TotalParticipantesTime--; 
+                _membrosTime.Remove(competidor);
+                ListaCampeonato.RemoverParticipante(competidor);
+                TotalMembrosTime--; 
             }
             else
             {
-                Console.WriteLine($"Não há ninguém chamado {competidor.Nome} na lista.");
+                Console.WriteLine($"Não há ninguém chamado {competidor.Nome} na lista do time.");
             }
         }
         public void RemoverCompetidores(params Competidor[] competidores)
@@ -70,14 +71,15 @@ namespace Campeonato.Equipes
         public void ExibeInfo()
         {
             Console.WriteLine("Nome do time: " + Nome);
-            Console.WriteLine("Pessoas no time: " + TotalParticipantesTime);
+            Console.WriteLine("Pessoas no time: " + TotalMembrosTime);
         }
 
         public void ExibeListaTime()
         {
-            Console.WriteLine($"LISTA DE PARTICIPANTES DO TIME {Nome.ToUpper()} POR ORDEM ALFABÉTICA");
-            participantes.Sort((x, y) => x.Nome.CompareTo(y.Nome));
-            participantes.ForEach(i => Console.WriteLine(i.ToString()));
+            Console.WriteLine($"LISTA DE MEMBROS DO TIME {Nome.ToUpper()} POR ORDEM ALFABÉTICA");
+            _membrosTime.Sort((x, y) => x.Nome.CompareTo(y.Nome));
+            _membrosTime.ForEach(i => Console.WriteLine(i.ToString()));
         }
+
     }
 }

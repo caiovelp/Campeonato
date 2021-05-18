@@ -31,15 +31,21 @@ namespace Campeonato
 
             Azul.RegistrarCompetidores(Mylena, Elias, Nina, Elza);
 
-            Azul.RemoverCompetidores(Elias, Mylena);
-
-
-
             Azul.ExibeInfo();
             PulaLinha();
             Azul.ExibeListaTime();
+            PulaLinha();
 
             Time Amarelo = new Time("Amarelo");
+
+            Amarelo.RegistrarCompetidores(Mylena, Elias);
+
+            Amarelo.ExibeInfo();
+            PulaLinha();
+            Amarelo.ExibeListaTime();
+            PulaLinha();
+
+            Time.ExibeParticipantes();
 
             Time Vermelho = new Time("Vermelho");
 

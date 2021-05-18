@@ -33,6 +33,10 @@ namespace Campeonato.Pessoas
         {
             return Nome + ", Contato: " + Celular;
         }
+        public string InfoCompleta()
+        {
+            return Nome + " / " + CPF + " / " + Celular;
+        }
         public override bool Equals(object obj)
         {
             Pessoa pessoa = obj as Pessoa;
