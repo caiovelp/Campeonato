@@ -19,10 +19,6 @@ namespace Campeonato.Equipes
         }
 
         //Métodos
-        public bool VerificaParticipante(Competidor competidor)
-        {
-            return _participantes.Contains(competidor);
-        }
         public void RegistrarCompetidor(Competidor competidor)
         {
             if(_participantes.Contains(competidor)) {
