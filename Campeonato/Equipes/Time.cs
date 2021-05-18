@@ -11,7 +11,7 @@ namespace Campeonato.Equipes
         public string Nome { get; private set; }
         public int TotalParticipantesTime { get; private set; }
 
-        public List<string> participantes = new List<string>();
+        public List<Competidor> participantes = new List<Competidor>();
 
 
         //Próximo passo: (MODELO GINCANA IFRJ Então quando eu chamar a informação de participantes de uma competição,
@@ -26,14 +26,14 @@ namespace Campeonato.Equipes
         //Métodos
         public void RegistrarIndividuo(Competidor competidor)
         {
-            if(participantes.Contains(competidor.Nome)) {
+            if(participantes.Contains(competidor)) {
 
-                Console.WriteLine(competidor.Nome + " Já foi adicionado. " +
-                    "Não é permitido registrar o mesmo partipante 2 vezes");
+                Console.WriteLine($"{competidor.Nome} já foi adicionado. " +
+                    $"Não é permitido registrar o mesmo partipante 2 vezes");
             }
             else
             {
-                participantes.Add(competidor.ToString());
+                participantes.Add(competidor);
                 TotalParticipantesTime++;
             }
 
@@ -48,8 +48,7 @@ namespace Campeonato.Equipes
         public void ExibeListaTime()
         {
             Console.WriteLine("Participantes do time ordenados por nome:");
-            participantes.Sort();
-            participantes.ForEach(i => Console.WriteLine(i));
+            participantes.ForEach(i => Console.WriteLine(i.ToString()));
         }
     }
 }

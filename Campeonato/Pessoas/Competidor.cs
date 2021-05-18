@@ -22,10 +22,5 @@ namespace Campeonato.Pessoas
             Console.WriteLine(Tipo.ToUpper());
             Console.WriteLine("Nome: " + Nome + ", CPF: " + CPF + ", Celular: " + Celular);
         }
-
-        public override string ToString()
-        {
-            return Nome + ", Contato: " + Celular;
-        }
     }
 }

@@ -34,9 +34,17 @@ namespace Campeonato
             Azul.RegistrarIndividuo(Nina);
             Azul.RegistrarIndividuo(Elias);
 
+
             Azul.ExibeInfo();
             PulaLinha();
             Azul.ExibeListaTime();
+
+            Time Amarelo = new Time("Amarelo");
+
+            Time Vermelho = new Time("Vermelho");
+
+            Time Verde = new Time("Verde");
+
             
 
             PulaLinha();

@@ -29,5 +29,21 @@ namespace Campeonato.Pessoas
             Console.WriteLine("Número de pessoas presentes: " + TotalDePessoas);
         }
         public abstract void ExibeInfo();
+        public override string ToString()
+        {
+            return Nome + ", Contato: " + Celular;
+        }
+        public override bool Equals(object obj)
+        {
+            Pessoa pessoa = obj as Pessoa;
+
+            if(pessoa == null)
+            {
+                return false;
+            }
+
+            return Nome == pessoa.Nome && CPF == pessoa.CPF && Celular == pessoa.Celular;
+        }
+
     }
 }
