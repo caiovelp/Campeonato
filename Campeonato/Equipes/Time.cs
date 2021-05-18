@@ -24,7 +24,7 @@ namespace Campeonato.Equipes
         }
 
         //Métodos
-        public void RegistrarIndividuo(Competidor competidor)
+        public void RegistrarCompetidor(Competidor competidor)
         {
             if(participantes.Contains(competidor)) {
 
@@ -39,7 +39,15 @@ namespace Campeonato.Equipes
 
         }
 
-        public void RemoverIndividuo(Competidor competidor)
+        public void RegistrarCompetidores(params Competidor[] competidores)
+        {
+            foreach(Competidor competidor in competidores)
+            {
+                RegistrarCompetidor(competidor);
+            }
+        }
+
+        public void RemoverCompetidor(Competidor competidor)
         {
             if (participantes.Contains(competidor))
             {
@@ -51,6 +59,13 @@ namespace Campeonato.Equipes
                 Console.WriteLine($"Não há ninguém chamado {competidor.Nome} na lista.");
             }
         }
+        public void RemoverCompetidores(params Competidor[] competidores)
+        {
+            foreach (Competidor competidor in competidores)
+            {
+                RemoverCompetidor(competidor);
+            }
+        }
 
         public void ExibeInfo()
         {
@@ -60,7 +75,8 @@ namespace Campeonato.Equipes
 
         public void ExibeListaTime()
         {
-            Console.WriteLine("Participantes do time ordenados por nome:");
+            Console.WriteLine($"LISTA DE PARTICIPANTES DO TIME {Nome.ToUpper()} POR ORDEM ALFABÉTICA");
+            participantes.Sort((x, y) => x.Nome.CompareTo(y.Nome));
             participantes.ForEach(i => Console.WriteLine(i.ToString()));
         }
     }

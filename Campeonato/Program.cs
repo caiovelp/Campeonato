@@ -21,20 +21,17 @@ namespace Campeonato
 
             Competidor Mylena = new Competidor("Mylena Leite", "15452030751", "21976948862");
             Competidor Elias = new Competidor("Elias Silva", "94811974336", "64999018878");
-            Competidor Elias2 = new Competidor("Elias Silva", "94811974336", "64999018878");
             Competidor Nina = new Competidor("Nina Almeida", "29899579793", "21985038933");
             Competidor Elza = new Competidor("Elza Barros", "68349901780", "21997588342");
-            Competidor Elza2 = new Competidor("Elza Barros", "68349901780", "21997588342");
 
             PulaLinha();
 
             //Equipes
             Time Azul = new Time("Azul");
 
-            Azul.RegistrarIndividuo(Mylena);
-            Azul.RegistrarIndividuo(Elza);
-            Azul.RegistrarIndividuo(Nina);
-            Azul.RegistrarIndividuo(Elias);
+            Azul.RegistrarCompetidores(Mylena, Elias, Nina, Elza);
+
+            Azul.RemoverCompetidores(Elias, Mylena);
 
 
 
