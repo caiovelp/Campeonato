@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Campeonato.Equipes
 {
-    public class ListaCampeonato
+    public interface IListaCampeonato
     {
         protected static List<Competidor> _participantes = new List<Competidor>();
         public static int TotalParticipantesCampeonato { get; private set; }
@@ -24,7 +24,8 @@ namespace Campeonato.Equipes
 
         public static void ExibeParticipantes()
         {
-            Console.WriteLine($"MOSTRANDO {TotalParticipantesCampeonato} PARTICIPANTES DO CAMPEONATO POR ORDEM ALFABÉTICA");
+            Console.WriteLine();
+            Console.WriteLine($"MOSTRANDO {TotalParticipantesCampeonato} PARTICIPANTES QUE ESTÃO EM UM TIME POR ORDEM ALFABÉTICA");
             _participantes.Sort((x, y) => x.Nome.CompareTo(y.Nome));
             _participantes.ForEach(i => Console.WriteLine(i.InfoCompleta()));
         }

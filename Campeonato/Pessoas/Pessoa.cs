@@ -10,7 +10,6 @@ namespace Campeonato.Pessoas
         public string Nome { get; private set; }
         public string CPF { get; private set; }
         public string Celular { get; private set; }
-
         protected static int TotalDePessoas { get; set; }
 
         //Construtor
