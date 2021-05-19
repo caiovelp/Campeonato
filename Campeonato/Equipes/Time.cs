@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Campeonato.Equipes
 {
-    public class Time : IListaCampeonato
+    public class Time : IListaCompetidoresEmUmTime
     {
         //Atributos
         public string Nome { get; private set; }
@@ -21,7 +21,7 @@ namespace Campeonato.Equipes
         //Métodos
         public void RegistrarCompetidor(Competidor competidor)
         {
-            if(IListaCampeonato._participantes.Contains(competidor)) {
+            if(IListaCompetidoresEmUmTime._participantes.Contains(competidor)) {
 
                 Console.WriteLine($"{competidor.Nome} já foi adicionado no campeonato. " +
                     $"Não é permitido registrar o mesmo partipante 2 vezes");
@@ -29,7 +29,7 @@ namespace Campeonato.Equipes
             else
             {
                 _membrosTime.Add(competidor);
-                IListaCampeonato.AdicionarParticipante(competidor);
+                IListaCompetidoresEmUmTime.AdicionarParticipante(competidor);
                 TotalMembrosTime++;
             }
 
@@ -45,10 +45,10 @@ namespace Campeonato.Equipes
 
         public void RemoverCompetidor(Competidor competidor)
         {
-            if (IListaCampeonato._participantes.Contains(competidor))
+            if (IListaCompetidoresEmUmTime._participantes.Contains(competidor))
             {
                 _membrosTime.Remove(competidor);
-                IListaCampeonato.RemoverParticipante(competidor);
+                IListaCompetidoresEmUmTime.RemoverParticipante(competidor);
                 TotalMembrosTime--; 
             }
             else

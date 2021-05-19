@@ -1,5 +1,6 @@
 ﻿using Campeonato.Competições;
 using Campeonato.Equipes;
+using Campeonato.Listas;
 using Campeonato.Pessoas;
 using System;
 
@@ -22,7 +23,7 @@ namespace Campeonato
             Competidor Elias = new Competidor("Elias Silva", "94811974336", "64999018878");
             Competidor Nina = new Competidor("Nina Almeida", "29899579793", "21985038933");
             Competidor Elza = new Competidor("Elza Barros", "68349901780", "21997588342");
-            Competidor Jonas = new Competidor("Jonas Soares", "00191988766", "2187546263");
+            Competidor Jonas = new Competidor("Jonas Soares", "00191988766", "21987546263");
 
             PulaLinha();
 
@@ -50,8 +51,9 @@ namespace Campeonato
 
             Time Verde = new Time("Verde");
 
-            IListaCampeonato.ExibeParticipantes();
             IListaCompetidores.ExibeListaCompetidores();
+            IListaCompetidores.ExibeParticipantes();
+            IListaCompetidores.ExibeNParticipantes();
 
 
             
