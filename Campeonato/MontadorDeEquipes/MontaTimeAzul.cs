@@ -12,7 +12,7 @@ namespace Campeonato
     {
         static void MontaTimeAzul()
         {
-            var arquivo = "competidores.txt";
+            var arquivo = "timeAzul.txt";
 
             using (var fluxoDoArquivo = new FileStream(arquivo, FileMode.Open))
             using (var leitor = new StreamReader(fluxoDoArquivo))
@@ -36,7 +36,7 @@ namespace Campeonato
 
         static Competidor ConverterStringParaCompetidor(string linha)
         {
-            var campos = linha.Split('&');
+            var campos = linha.Split(',');
 
             var nome = campos[0];
             var cpf = campos[1];

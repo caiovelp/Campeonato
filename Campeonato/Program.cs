@@ -25,6 +25,12 @@ namespace Campeonato
             IListaCompetidores.ExibeParticipantes();
             IListaCompetidores.ExibeNParticipantes();
 
+            MontaCompeticoes();
+
+            IListaCompeticoes.ExibeListaCompeticoes();
+
+
+
         }
 
     }
