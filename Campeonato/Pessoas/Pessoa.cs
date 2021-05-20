@@ -17,7 +17,7 @@ namespace Campeonato.Pessoas
         {
             Nome = nome;
             CPF = Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
-            Celular = Convert.ToUInt64(celular).ToString(@"(00)00000\-0000");
+            Celular = Convert.ToUInt64(celular).ToString(@"(00) 00000\-0000");
 
             TotalDePessoas++;
         }
