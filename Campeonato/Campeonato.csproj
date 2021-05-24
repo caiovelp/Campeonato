@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Caelum.Stella.CSharp" Version="1.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Program.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>

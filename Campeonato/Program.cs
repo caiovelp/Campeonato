@@ -21,15 +21,13 @@ namespace Campeonato
         {
             MontaTimeAzul();
 
-            IListaCompetidores.ExibeListaCompetidores();
+            //IListaCompetidores.ExibeListaCompetidores();
             IListaCompetidores.ExibeParticipantes();
             IListaCompetidores.ExibeNParticipantes();
 
-            MontaCompeticoes();
+            //MontaCompeticoes();
 
-            IListaCompeticoes.ExibeListaCompeticoes();
-
-
+            //IListaCompeticoes.ExibeListaCompeticoes();
 
         }
 
