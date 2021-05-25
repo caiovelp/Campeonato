@@ -18,13 +18,19 @@ namespace Campeonato.Pessoas
         public Pessoa(string nome, string cpf, string celular)
         {
             Nome = nome;
-            if(ValidarCPF(cpf))
+            
+            try
             {
+                new CPFValidator().AssertValid(cpf);
                 CPF = Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
-            } else
-            {
-                Console.WriteLine($"CPF de {nome} inválido: {cpf}");
+                Debug.WriteLine($"CPF Válido: {cpf}");
             }
+            catch(Exception exc)
+            {
+                Debug.WriteLine($"CPF de {nome} inválido: {exc}");
+                Console.WriteLine($"CPF de {nome} inválido: {exc.Message}");
+            }
+            
             Celular = Convert.ToUInt64(celular).ToString(@"(00) 00000\-0000");
 
             TotalDePessoas++;
